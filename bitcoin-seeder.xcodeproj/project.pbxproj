@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B21C9CA2457946B004D377A /* bitcoin.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6A4996245627DC009AD170 /* bitcoin.h */; };
+		4B21C9CB24579470004D377A /* db.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6A4995245627DC009AD170 /* db.h */; };
+		4B21C9CC24579473004D377A /* dns.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6A4990245627DC009AD170 /* dns.h */; };
+		4B21C9CD24579476004D377A /* netbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6A4997245627DC009AD170 /* netbase.h */; };
+		4B21C9CE24579479004D377A /* protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6A4991245627DC009AD170 /* protocol.h */; };
+		4B21C9CF2457947C004D377A /* serialize.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6A4999245627DD009AD170 /* serialize.h */; };
+		4B21C9D02457947F004D377A /* strlcpy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6A498E245627DC009AD170 /* strlcpy.h */; };
+		4B21C9D124579481004D377A /* uint256.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6A4994245627DC009AD170 /* uint256.h */; };
+		4B21C9D224579484004D377A /* util.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6A499A245627DD009AD170 /* util.h */; };
+		4B21CAAA24579B37004D377A /* openssl in Headers */ = {isa = PBXBuildFile; fileRef = 4B21CAA924579B37004D377A /* openssl */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B21CAAC24579B7B004D377A /* cryptopp in Headers */ = {isa = PBXBuildFile; fileRef = 4B21CAAB24579B7B004D377A /* cryptopp */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B6A499B245627DD009AD170 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A498C245627DC009AD170 /* main.cpp */; };
+		4B6A499C245627DD009AD170 /* netbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A498D245627DC009AD170 /* netbase.cpp */; };
+		4B6A499E245627DD009AD170 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A4992245627DC009AD170 /* util.cpp */; };
+		4B6A49A7245627F1009AD170 /* protocol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A49A0245627F0009AD170 /* protocol.cpp */; };
+		4B6A49A8245627F1009AD170 /* db.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A49A1245627F0009AD170 /* db.cpp */; };
+		4B6A49AC245627F1009AD170 /* dns.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A49A5245627F1009AD170 /* dns.cpp */; };
+		4B6A49AD245627F1009AD170 /* bitcoin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4B6A49A6245627F1009AD170 /* bitcoin.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4B6A498024562620009AD170 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4B21C9D42457956C004D377A /* libcorecrypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcorecrypto.tbd; path = usr/lib/system/libcorecrypto.tbd; sourceTree = SDKROOT; };
+		4B21CAA924579B37004D377A /* openssl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = openssl; path = ../../../usr/local/include/openssl; sourceTree = "<group>"; };
+		4B21CAAB24579B7B004D377A /* cryptopp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = cryptopp; path = ../../../usr/local/include/cryptopp; sourceTree = "<group>"; };
+		4B6A498224562620009AD170 /* bitcoin-seeder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "bitcoin-seeder"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B6A498524562620009AD170 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4B6A498C245627DC009AD170 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4B6A498D245627DC009AD170 /* netbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = netbase.cpp; sourceTree = "<group>"; };
+		4B6A498E245627DC009AD170 /* strlcpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strlcpy.h; sourceTree = "<group>"; };
+		4B6A498F245627DC009AD170 /* protocol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = protocol.cpp; sourceTree = "<group>"; };
+		4B6A4990245627DC009AD170 /* dns.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dns.h; sourceTree = "<group>"; };
+		4B6A4991245627DC009AD170 /* protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = protocol.h; sourceTree = "<group>"; };
+		4B6A4992245627DC009AD170 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		4B6A4993245627DC009AD170 /* dns.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dns.cpp; sourceTree = "<group>"; };
+		4B6A4994245627DC009AD170 /* uint256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uint256.h; sourceTree = "<group>"; };
+		4B6A4995245627DC009AD170 /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
+		4B6A4996245627DC009AD170 /* bitcoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitcoin.h; sourceTree = "<group>"; };
+		4B6A4997245627DC009AD170 /* netbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netbase.h; sourceTree = "<group>"; };
+		4B6A4998245627DD009AD170 /* compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compat.h; sourceTree = "<group>"; };
+		4B6A4999245627DD009AD170 /* serialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = serialize.h; sourceTree = "<group>"; };
+		4B6A499A245627DD009AD170 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		4B6A49A0245627F0009AD170 /* protocol.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = protocol.cpp; sourceTree = "<group>"; };
+		4B6A49A1245627F0009AD170 /* db.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = db.cpp; sourceTree = "<group>"; };
+		4B6A49A2245627F0009AD170 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4B6A49A3245627F0009AD170 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		4B6A49A4245627F0009AD170 /* netbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = netbase.cpp; sourceTree = "<group>"; };
+		4B6A49A5245627F1009AD170 /* dns.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dns.cpp; sourceTree = "<group>"; };
+		4B6A49A6245627F1009AD170 /* bitcoin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitcoin.cpp; sourceTree = "<group>"; };
+		4B6A49B0245633EF009AD170 /* libboringssl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libboringssl.tbd; path = usr/lib/libboringssl.tbd; sourceTree = SDKROOT; };
+		4B6A49B224563753009AD170 /* libcommonCrypto.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcommonCrypto.tbd; path = usr/lib/system/libcommonCrypto.tbd; sourceTree = SDKROOT; };
+		4B6A49B424563A99009AD170 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../../usr/local/Cellar/openssl@1.1/1.1.1g/lib/libcrypto.a"; sourceTree = "<group>"; };
+		4B6A49B624563AC8009AD170 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../../usr/local/Cellar/openssl@1.1/1.1.1g/lib/libssl.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B6A497F24562620009AD170 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B6A497924562620009AD170 = {
+			isa = PBXGroup;
+			children = (
+				4B21CAAB24579B7B004D377A /* cryptopp */,
+				4B21CAA924579B37004D377A /* openssl */,
+				4B6A498424562620009AD170 /* bitcoin-seeder */,
+				4B6A498324562620009AD170 /* Products */,
+				4B6A49AF245633EE009AD170 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4B6A498324562620009AD170 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B6A498224562620009AD170 /* bitcoin-seeder */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B6A498424562620009AD170 /* bitcoin-seeder */ = {
+			isa = PBXGroup;
+			children = (
+				4B6A49A6245627F1009AD170 /* bitcoin.cpp */,
+				4B6A49A1245627F0009AD170 /* db.cpp */,
+				4B6A49A5245627F1009AD170 /* dns.cpp */,
+				4B6A49A2245627F0009AD170 /* main.cpp */,
+				4B6A49A4245627F0009AD170 /* netbase.cpp */,
+				4B6A49A0245627F0009AD170 /* protocol.cpp */,
+				4B6A49A3245627F0009AD170 /* util.cpp */,
+				4B6A4996245627DC009AD170 /* bitcoin.h */,
+				4B6A4998245627DD009AD170 /* compat.h */,
+				4B6A4995245627DC009AD170 /* db.h */,
+				4B6A4993245627DC009AD170 /* dns.cpp */,
+				4B6A4990245627DC009AD170 /* dns.h */,
+				4B6A498C245627DC009AD170 /* main.cpp */,
+				4B6A498D245627DC009AD170 /* netbase.cpp */,
+				4B6A4997245627DC009AD170 /* netbase.h */,
+				4B6A498F245627DC009AD170 /* protocol.cpp */,
+				4B6A4991245627DC009AD170 /* protocol.h */,
+				4B6A4999245627DD009AD170 /* serialize.h */,
+				4B6A498E245627DC009AD170 /* strlcpy.h */,
+				4B6A4994245627DC009AD170 /* uint256.h */,
+				4B6A4992245627DC009AD170 /* util.cpp */,
+				4B6A499A245627DD009AD170 /* util.h */,
+				4B6A498524562620009AD170 /* main.cpp */,
+			);
+			path = "bitcoin-seeder";
+			sourceTree = "<group>";
+		};
+		4B6A49AF245633EE009AD170 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B21C9D42457956C004D377A /* libcorecrypto.tbd */,
+				4B6A49B624563AC8009AD170 /* libssl.a */,
+				4B6A49B424563A99009AD170 /* libcrypto.a */,
+				4B6A49B224563753009AD170 /* libcommonCrypto.tbd */,
+				4B6A49B0245633EF009AD170 /* libboringssl.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4B6A49AE245633CE009AD170 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B21CAAA24579B37004D377A /* openssl in Headers */,
+				4B21CAAC24579B7B004D377A /* cryptopp in Headers */,
+				4B21C9CA2457946B004D377A /* bitcoin.h in Headers */,
+				4B21C9CB24579470004D377A /* db.h in Headers */,
+				4B21C9CD24579476004D377A /* netbase.h in Headers */,
+				4B21C9CF2457947C004D377A /* serialize.h in Headers */,
+				4B21C9D02457947F004D377A /* strlcpy.h in Headers */,
+				4B21C9CE24579479004D377A /* protocol.h in Headers */,
+				4B21C9D224579484004D377A /* util.h in Headers */,
+				4B21C9D124579481004D377A /* uint256.h in Headers */,
+				4B21C9CC24579473004D377A /* dns.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4B6A498124562620009AD170 /* bitcoin-seeder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B6A498924562620009AD170 /* Build configuration list for PBXNativeTarget "bitcoin-seeder" */;
+			buildPhases = (
+				4B21C9D624579A43004D377A /* export */,
+				4B6A49AE245633CE009AD170 /* Headers */,
+				4B6A497E24562620009AD170 /* Sources */,
+				4B6A497F24562620009AD170 /* Frameworks */,
+				4B6A498024562620009AD170 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "bitcoin-seeder";
+			productName = "bitcoin-seeder";
+			productReference = 4B6A498224562620009AD170 /* bitcoin-seeder */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B6A497A24562620009AD170 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = git;
+				TargetAttributes = {
+					4B6A498124562620009AD170 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 4B6A497D24562620009AD170 /* Build configuration list for PBXProject "bitcoin-seeder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B6A497924562620009AD170;
+			productRefGroup = 4B6A498324562620009AD170 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B6A498124562620009AD170 /* bitcoin-seeder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4B21C9D624579A43004D377A /* export */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = export;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export LDFLAGS=\"-L/usr/local/opt/openssl@1.1/lib\"\nexport CPPFLAGS=\"-I/usr/local/opt/openssl@1.1/include\"\nexport PKG_CONFIG_PATH=\"/usr/local/opt/openssl@1.1/lib/pkgconfig\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B6A497E24562620009AD170 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B6A49A7245627F1009AD170 /* protocol.cpp in Sources */,
+				4B6A499B245627DD009AD170 /* main.cpp in Sources */,
+				4B6A49AD245627F1009AD170 /* bitcoin.cpp in Sources */,
+				4B6A499C245627DD009AD170 /* netbase.cpp in Sources */,
+				4B6A49A8245627F1009AD170 /* db.cpp in Sources */,
+				4B6A49AC245627F1009AD170 /* dns.cpp in Sources */,
+				4B6A499E245627DD009AD170 /* util.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4B6A498724562620009AD170 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/**",
+					"/usr/local/include/**",
+					/usr/local/include/boost,
+					/usr/local/include/openssl,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-O3",
+					"-g0",
+					"-march=native",
+					"-Wall",
+					"-Wno-unused",
+					"-Wno-sign-compare",
+					"-Wno-reorder",
+					"-Wno-comment",
+					"-lcrypto",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4B6A498824562620009AD170 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/**",
+					"/usr/local/include/**",
+					/usr/local/include/boost,
+					/usr/local/include/openssl,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"-O3",
+					"-g0",
+					"-march=native",
+					"-Wall",
+					"-Wno-unused",
+					"-Wno-sign-compare",
+					"-Wno-reorder",
+					"-Wno-comment",
+					"-lcrypto",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4B6A498A24562620009AD170 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+					"/usr/local/include/**",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4B6A498B24562620009AD170 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M684FYCYG6;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+					"/usr/local/include/**",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B6A497D24562620009AD170 /* Build configuration list for PBXProject "bitcoin-seeder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B6A498724562620009AD170 /* Debug */,
+				4B6A498824562620009AD170 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B6A498924562620009AD170 /* Build configuration list for PBXNativeTarget "bitcoin-seeder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B6A498A24562620009AD170 /* Debug */,
+				4B6A498B24562620009AD170 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B6A497A24562620009AD170 /* Project object */;
+}

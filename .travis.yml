@@ -1,0 +1,50 @@
+macros:
+    - &linux
+      language: c
+      os: linux
+      dist: bionic
+      compiler:
+      - clang
+      - g++
+      addons:
+          apt:
+            sources:
+                - ubuntu-toolchain-r-test
+            packages:
+                - build-essential
+                - libboost-all-dev
+                - libssl-dev
+                - g++
+      script:
+          - cd bitcoin-seeder && make --debug=v
+          #- dig -t NS localhost
+          #- ./bitcoin-dnsseeder -h localhost -n localhost -m travis.travis-ci.org
+
+matrix:
+    include:
+        - <<: *linux
+          env:
+              - LDFLAGS=-L/usr/local/opt/openssl@1.1/lib
+              - CPPFLAGS=-I/usr/local/opt/openssl@1.1/include
+              - PKG_CONFIG_PATH=/usr/local/opt/openssl@1.1/lib/pkgconfig
+        - language: objective-c
+          os: osx
+          osx_image: xcode11
+          addons:
+              homebrew:
+                  packages:
+                      - autoconf
+                      - automake
+                      - libtool
+                      - pkg-config
+                      - boost
+                      - boost-build
+                      - openssl
+                      - gcc
+                  update: true
+          script:
+              #- export PATH="/usr/local/opt/openssl@1.1/bin:$PATHi"
+              #- export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+              #- export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+              #- export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+              #- xcodebuild -project *.xcodeproj -scheme bitcoin-seeder -sdk macosx10.15 CODE_SIGNING_ALLOWED=NO

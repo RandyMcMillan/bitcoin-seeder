@@ -326,7 +326,8 @@ public:
       Bad_(addr, ban);
   }
   bool Get(CServiceResult &ip, int& wait) {
-    CRITICAL_BLOCK(cs)
+      CRITICAL_BLOCK(cs)
+      ;
       return Get_(ip, wait);
   }
   void GetMany(std::vector<CServiceResult> &ips, int max, int& wait) {

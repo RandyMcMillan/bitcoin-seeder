@@ -1,5 +1,13 @@
-#include <algorithm>
+//
+//  main.cpp
+//  bitcoin-seeder
+//
+//  Created by git on 4/26/20.
+//  Copyright © 2020 git. All rights reserved.
+//
 
+#include <algorithm>
+#include <cstdint>
 #define __STDC_FORMAT_MACROS
 #include <inttypes.h>
 #include <pthread.h>
