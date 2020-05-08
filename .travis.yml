@@ -16,35 +16,37 @@ macros:
                 - libssl-dev
                 - g++
       script:
-          - cd bitcoin-seeder && make --debug=v
+          - cd bitcoin-seeder
+          - travis_retry make --debug=v
           #- dig -t NS localhost
           #- ./bitcoin-dnsseeder -h localhost -n localhost -m travis.travis-ci.org
 
 matrix:
     include:
         - <<: *linux
-          env:
-              - LDFLAGS=-L/usr/local/opt/openssl@1.1/lib
-              - CPPFLAGS=-I/usr/local/opt/openssl@1.1/include
-              - PKG_CONFIG_PATH=/usr/local/opt/openssl@1.1/lib/pkgconfig
+          #env:
+          #    - LDFLAGS=-L/usr/local/opt/openssl@1.1/lib
+          #    - CPPFLAGS=-I/usr/local/opt/openssl@1.1/include
+          #    - PKG_CONFIG_PATH=/usr/local/opt/openssl@1.1/lib/pkgconfig
         - language: objective-c
           os: osx
           osx_image: xcode11
-          addons:
-              homebrew:
-                  packages:
-                      - autoconf
-                      - automake
-                      - libtool
-                      - pkg-config
-                      - boost
-                      - boost-build
-                      - openssl
-                      - gcc
-                  update: true
+          #addons:
+          #    homebrew:
+          #        packages:
+          #            - autoconf
+          #            - automake
+          #            - libtool
+          #            - pkg-config
+          #            - boost
+          #            - boost-build
+          #            - openssl
+          #            - gcc
+          #        update: true
           script:
+              - echo 'Building....'
               #- export PATH="/usr/local/opt/openssl@1.1/bin:$PATHi"
               #- export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
               #- export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
               #- export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
-              #- xcodebuild -project *.xcodeproj -scheme bitcoin-seeder -sdk macosx10.15 CODE_SIGNING_ALLOWED=NO
+              - travis_retry xcodebuild -project bitcoin-seeder.xcodeproj -scheme bitcoin-seeder -sdk macosx10.15 CODE_SIGNING_ALLOWED=NO

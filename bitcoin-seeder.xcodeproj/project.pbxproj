@@ -237,7 +237,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export LDFLAGS=\"-L/usr/local/opt/openssl@1.1/lib\"\nexport CPPFLAGS=\"-I/usr/local/opt/openssl@1.1/include\"\nexport PKG_CONFIG_PATH=\"/usr/local/opt/openssl@1.1/lib/pkgconfig\"\n";
+			shellScript = "#export LDFLAGS=\"-L/usr/local/opt/openssl@1.1/lib\"\n#export CPPFLAGS=\"-I/usr/local/opt/openssl@1.1/include\"\n#export PKG_CONFIG_PATH=\"/usr/local/opt/openssl@1.1/lib/pkgconfig\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -18,6 +18,7 @@ checkbrew() {
         brew link openssl
         brew install gcc
         brew install make
+        brew install xctool
         brew link make
         #If you need to have openssl@1.1 first in your PATH run:
         #  echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> ~/.bash_profile
