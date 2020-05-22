@@ -11,7 +11,7 @@ checkbrew() {
         #brew upgrade
         brew install openssl@1.1
         brew install autoconf automake libtool pkg-config boost boost-build gcc
-        brew install iftop
+        brew install grep iftop
         true
     else
         #We install homebrew if not exist
@@ -21,11 +21,12 @@ checkbrew() {
 }
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     if hash apt 2>/dev/null; then
-        apt-get update
-        apt-get install screen
-        apt-get install make g++
-        apt-get install build-essential libboost-all-dev libssl-dev
-        apt-get install iftop
+        apt-get update && apt-get install -y apt-utils
+        apt-get install -y curl wget git
+        apt-get install -y screen
+        apt-get install -y c++ g++ make
+        apt-get install -y build-essential libboost-all-dev libssl-dev
+        apt-get install -y iftop pcregrep
     fi
     true #checkbrew linuxbrew acting weird in travis-ci
 elif [[ "$OSTYPE" == "darwin"* ]]; then
