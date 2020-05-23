@@ -1,0 +1,16 @@
+FROM ubuntu:latest
+
+ENV DEBIAN_FRONTEND noninteractive
+
+ENV PATH "/usr/src/dnsseeder:/usr/scr/dnsseeder/scripts:/usr/local/sbin/iftop:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+COPY . /usr/src/dnsseeder
+
+WORKDIR /usr/src/dnsseeder
+
+RUN /usr/src/dnsseeder/scripts/before_install.sh
+
+RUN cd /usr/src/dnsseeder && make
+
+RUN /usr/src/dnsseeder/./dnsseed -h seeder.bitcoincore.dev -n ns3.digitalocean.com. -m admin.bitcoincore.dev 2>/dev/null
+

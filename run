@@ -8,7 +8,7 @@ make
 
 screen -S 1 ./dnsseed -h seeder.bitcoincore.dev -n ns1.digitalocean.com. -m admin.bitcoincore.dev 2>/dev/null &
 
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
+if [[ "$OSTYPE" == "linux"* ]]; then
 #screen -S 2 /usr/sbin/./iftop
 $(pwd)/scripts/script.sh
 elif [[ "$OSTYPE" == "darwin"* ]]; then

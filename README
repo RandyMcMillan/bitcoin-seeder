@@ -79,3 +79,11 @@ a non-privileged port:
 
 If properly configured, this will allow you to run dnsseed in userspace, using
 the -p 5353 option.
+
+## Useful COmmands
+
+```
+ssh -t  root@seeder.bitcoincore.dev "/usr/sbin/iftop"
+ssh -t  root@<your-url.com> "/usr/sbin/iftop"
+
+```

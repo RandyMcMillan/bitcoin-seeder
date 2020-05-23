@@ -19,27 +19,32 @@ checkbrew() {
         checkbrew
     fi
 }
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
+if [[ $OSTYPE = "linux"* ]]; then
+    echo "$OSTYPE"
     if hash apt 2>/dev/null; then
-        apt-get update && apt-get install -y apt-utils
-        apt-get install -y curl wget git
-        apt-get install -y screen
-        apt-get install -y c++ g++ make
-        apt-get install -y build-essential libboost-all-dev libssl-dev
-        apt-get install -y iftop pcregrep
+        apt install sudo
+        sudo apt install libpcap0.8 libpcap0.8-dev libncurses5 libncurses iftop
+        sudo apt-get update && apt-get install -y apt-utils
+        sudo apt-get install -y curl wget git
+        sudo apt-get install -y screen
+        sudo apt-get install -y c++ g++ make
+        sudo apt-get install -y build-essential libboost-all-dev libssl-dev
+        sudo apt-get install -y iftop pcregrep
     fi
     true #checkbrew linuxbrew acting weird in travis-ci
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+elif [[ "$OSTYPE" = "darwin"*.* ]]; then
+    echo "$OSTYPE"
     checkbrew
     #symlink on your machine too...
     OPENSSL_VERSION=$(brew list --versions | grep -i -E  "openssl" | sed 's%openssl@1.1% %')
     echo $OPENSSL_VERSION
-    ln -s /usr/local/opt/openssl/include/openssl /usr/local/include
-    ln -s /usr/local/Cellar/openssl/$OPENSSL_VERSION/include/openssl /usr/bin/openssl
-    ln -s /usr/local/opt/openssl/lib/libssl.1.1.dylib /usr/local/lib/
-    ln -s /usr/local/opt/openssl/lib/libcrypto.1.1.dylib /usr/local/lib/
-    ln -s /usr/local/opt/openssl/lib/libcrypto.a /usr/local/lib/
+    ln -sf /usr/local/opt/openssl/include/openssl /usr/local/include
+    ln -sf /usr/local/Cellar/openssl/$OPENSSL_VERSION/include/openssl /usr/bin/openssl
+    ln -sf /usr/local/opt/openssl/lib/libssl.1.1.dylib /usr/local/lib/
+    ln -sf /usr/local/opt/openssl/lib/libcrypto.1.1.dylib /usr/local/lib/
+    ln -sf /usr/local/opt/openssl/lib/libcrypto.a /usr/local/lib/
     which openssl
+    echo openssl -v
 elif [[ "$OSTYPE" == "cygwin" ]]; then
     echo TODO add support for $OSTYPE
 elif [[ "$OSTYPE" == "msys" ]]; then
