@@ -4,17 +4,9 @@ echo " )_ _( ) \/ (  (  _( )__ __(  )_\  ) |    ) |    "
 echo " _| |_ |  \ |  _) \    | |   /( )\ | (__  | (__  "
 echo ")_____()_()_( )____)   )_(  )_/ \_()____( )____( "
 if [[ "$OSTYPE" = *"linux"* ]]; then
-     #echo "synlinking dnsseed to /usr/local/bin"
-     #sudo ls -sf $(pwd)/dnsseed /usr/local/bin/dnsseed
-     export PATH=$PATH:$(pwd)
      echo "$PATH"
-     #echo TODO add support for $OSTYPE
 elif [[ "$OSTYPE" = *"darwin"* ]]; then
-     #echo "synlinking dnsseed to /usr/local/bin"
-     export PATH=$PATH:$(pwd)
      echo "$PATH"
-     #sudo ls -sf $(pwd)/dnsseed /usr/local/bin/dnsseed
-     #echo TODO add support for $OSTYPE
 elif [[ "$OSTYPE" == "cygwin" ]]; then
 echo TODO add support for $OSTYPE
 elif [[ "$OSTYPE" == "msys" ]]; then

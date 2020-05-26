@@ -4,6 +4,7 @@ echo "\  _) ) __( ) __( / __ \ /  _ \ ) __(         )_ _( ) \/ (  (  _( )__ __( 
 echo "|  (  | _)  | _)  ))__(( )  ' / | _)          _| |_ |  \ |  _) \    | |   /( )\ | (__  | (__  "
 echo "/__o) )___( )_(   \____/ |_()_\ )___(  _____ )_____()_()_( )____)   )_(  )_/ \_()____( )____( "
 
+echo "OSTYPE = $OSTYPE"
 checkbrew() {
 
     if hash brew 2>/dev/null; then
@@ -19,8 +20,7 @@ checkbrew() {
         checkbrew
     fi
 }
-if [[ $OSTYPE = "linux"* ]]; then
-    echo "$OSTYPE"
+if [[ $OSTYPE = *"linux"* ]]; then
     if hash apt 2>/dev/null; then
         apt install sudo
         sudo apt install libpcap0.8 libpcap0.8-dev libncurses5 libncurses iftop
@@ -32,8 +32,7 @@ if [[ $OSTYPE = "linux"* ]]; then
         sudo apt-get install -y iftop pcregrep
     fi
     true #checkbrew linuxbrew acting weird in travis-ci
-elif [[ "$OSTYPE" = "darwin"*.* ]]; then
-    echo "$OSTYPE"
+elif [[ "$OSTYPE" = *"darwin"* ]]; then
     checkbrew
     #symlink on your machine too...
     OPENSSL_VERSION=$(brew list --versions | grep -i -E  "openssl" | sed 's%openssl@1.1% %')
@@ -44,7 +43,13 @@ elif [[ "$OSTYPE" = "darwin"*.* ]]; then
     ln -sf /usr/local/opt/openssl/lib/libcrypto.1.1.dylib /usr/local/lib/
     ln -sf /usr/local/opt/openssl/lib/libcrypto.a /usr/local/lib/
     which openssl
-    echo openssl -v
+    #echo openssl -v
+    PKG_CONFIG_VERSION=$(brew list --versions | grep -i -E  "pkg-config" | sed 's%pkg-config% %')
+    echo $OPENSSL_VERSION
+    ln -sf /usr/local/opt/pkg-config/bin/pkg-config /usr/bin/pkg-config
+    ln -sf /usr/local/opt/pkg-config/share/aclocal/pkg.m4 /usr/local/share/aclocal/pkg.m4
+    which pkg-config
+    pkg-config --version
 elif [[ "$OSTYPE" == "cygwin" ]]; then
     echo TODO add support for $OSTYPE
 elif [[ "$OSTYPE" == "msys" ]]; then

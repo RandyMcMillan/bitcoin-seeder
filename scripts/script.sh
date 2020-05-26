@@ -38,3 +38,9 @@ if [[ "$OSTYPE" == *"darwin"* ]]; then
   fi
 
 fi
+
+echo "OSTYPE = $OSTYPE"
+SEEDER_DOMAIN=${PWD##*/}
+echo "SEEDER_DOMAIN = $SEEDER_DOMAIN"
+$(pwd)/dnsseed -h $SEEDER_DOMAIN -n ns1.digitalocean.com. -m admin.bitcoincore.dev 2>/dev/null &
+

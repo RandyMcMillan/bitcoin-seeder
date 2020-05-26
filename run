@@ -2,18 +2,18 @@
 
 #sudo -v
 
-./scripts/before_install.sh
+$(pwd)/scripts/before_install.sh
 make
-./scripts/install.sh
-
-screen -S 1 ./dnsseed -h seeder.bitcoincore.dev -n ns1.digitalocean.com. -m admin.bitcoincore.dev 2>/dev/null &
+$(pwd)/scripts/install.sh
 
 if [[ "$OSTYPE" == "linux"* ]]; then
 #screen -S 2 /usr/sbin/./iftop
+$(pwd)/scripts/before_script.sh
 $(pwd)/scripts/script.sh
 elif [[ "$OSTYPE" == "darwin"* ]]; then
 #screen -S 2 sudo /usr/local/sbin/./iftop
-$(PWD)/scripts/script.sh
+$(pwd)/scripts/before_script.sh
+$(pwd)/scripts/script.sh
 elif [[ "$OSTYPE" == "cygwin" ]]; then
 echo TODO add support for $OSTYPE
 elif [[ "$OSTYPE" == "msys" ]]; then
